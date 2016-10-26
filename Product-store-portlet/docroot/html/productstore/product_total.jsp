@@ -54,11 +54,13 @@
 						label="" inlineField="true" style="width:150px;"></aui:input></td>
 			</tr>
 		</table>
+		<div style="padding-left: 10px;">
+			<aui:button-row>
+				<aui:button value="查询" onClick="<%=queryProductURL %>"></aui:button>&nbsp;&nbsp;
+				<aui:button type="reset" value="清除"></aui:button>
+			</aui:button-row>
+		</div>
 		
-		<aui:button-row>
-			<aui:button value="查询" onClick="<%=queryProductURL %>"></aui:button>&nbsp;&nbsp;
-			<aui:button type="reset" value="清除"></aui:button>
-		</aui:button-row>
 	</aui:fieldset>
 
 </aui:form>
@@ -70,9 +72,10 @@
 		<th width="300px;">产品说明</th>
 		<th>产品介绍</th>
 		<th>测试环境</th>
-		<th>WIKI</th>
+		<th>最新版本</th>
+		<th>最新版本日期</th>
 		<th width="100px;">申请使用</th>
-		<th width="100px;">用户评价</th>
+		<th width="100px;">用户追踪</th>
 		<th width="200px;">产品编辑</th>
 	</tr>
 	<%
@@ -101,6 +104,10 @@
 		<portlet:param name="productId"
 			value="<%=String.valueOf(product.getProductId())%>" />
 	</portlet:renderURL>
+	<portlet:renderURL var="productDetailURL">
+		<portlet:param name="mvcPath" value="/html/productstore/product_detail.jsp" />
+		<portlet:param name="productId" value="<%=String.valueOf(product.getProductId())%>" />
+	</portlet:renderURL>
 
 	<portlet:actionURL var="deleteProductURL" name="deleteProduct">
 		<portlet:param name="mvcPath"
@@ -112,12 +119,12 @@
 		<td><input type="hidden" id="<%=product.getProductId()%>"
 			name="productId" value="<%=product.getProductId()%>" /><a href=""><%=product.getProductName()%></a></td>
 		<td><%=product.getProductDesc()%></td>
-		<td><a href="<%=product.getProductLink()%>">查看产品文档</a></td>
-		<td><a href="<%=product.getVideoLink()%>">查看演示视频</a></td>
-		<td><a href="<%=product.getWikiLink()%>">WIKI</a></td>
-		
+		<td><aui:button value="查看" onClick="<%=productDetailURL%>"></aui:button></td>
+		<td><a href="http://172.20.0.28:8080/">打开</a></td>
+		<td>最新版本</td>
+		<td>最新版本日期</td>
 		<td><aui:button value="申请使用" onClick="<%=applyProductURL%>"></aui:button></td>
-		<td><aui:button value="查看评价" onClick="<%=assessLookURL%>"></aui:button></td>
+		<td><a href="">用户追踪</a></td>
 		<td><aui:button cssClass="<%=cssClass%>" value="编辑" onClick="<%= updateProductURL%>"></aui:button>
 			<aui:button value="新版本" onClick="<%= newVersionURL%>"></aui:button>
 			<aui:button cssClass="<%=cssClass%>" value="删除" onClick="return sure()"></aui:button>

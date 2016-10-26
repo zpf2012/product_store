@@ -27,7 +27,7 @@
     margin: 5px 0; 
 }
 tr {
-	height: 30px;
+	height: 25px;
 }
 
 .aui input {
@@ -49,6 +49,10 @@ th {
 td {
 	text-align: center;
 	padding: 5px;
+}
+.aui button{
+	padding: 5px; 
+	background-color: highlight;
 }
 
 </style>
