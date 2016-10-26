@@ -71,9 +71,9 @@
 		<th>产品介绍</th>
 		<th>测试环境</th>
 		<th>WIKI</th>
-		<th>申请使用</th>
-		<th>用户评价</th>
-		<th width="150px;">产品编辑</th>
+		<th width="100px;">申请使用</th>
+		<th width="100px;">用户评价</th>
+		<th width="200px;">产品编辑</th>
 	</tr>
 	<%
 		for(Product product: products){
@@ -118,8 +118,8 @@
 		
 		<td><aui:button value="申请使用" onClick="<%=applyProductURL%>"></aui:button></td>
 		<td><aui:button value="查看评价" onClick="<%=assessLookURL%>"></aui:button></td>
-		<td><aui:button cssClass="<%=cssClass%>" value="更新" onClick="<%= updateProductURL%>"></aui:button>&nbsp;&nbsp;
-			<aui:button value="新版本" onClick="<%= newVersionURL%>"></aui:button>&nbsp;&nbsp;
+		<td><aui:button cssClass="<%=cssClass%>" value="编辑" onClick="<%= updateProductURL%>"></aui:button>
+			<aui:button value="新版本" onClick="<%= newVersionURL%>"></aui:button>
 			<aui:button cssClass="<%=cssClass%>" value="删除" onClick="return sure()"></aui:button>
 			<script>
 					function sure(){

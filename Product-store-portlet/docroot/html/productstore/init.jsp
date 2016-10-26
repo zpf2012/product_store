@@ -40,7 +40,7 @@ tr {
 	margin: 5px 0;
 }
 th {
-	font-size: 16px;
+	font-size: 14px;
     font-weight: bold;
     text-align: -internal-center;
     margin-top: 5px;

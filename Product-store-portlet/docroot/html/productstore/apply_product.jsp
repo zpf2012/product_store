@@ -70,12 +70,6 @@
 			</td>
 		</tr>
 		<tr>
-			<th>申请说明</th>
-			<td>
-				<textarea rows="4" cols="1" style="width: 95%; border-width: 1; border-style: solid; margin-left: 10px;" name="productDesc"></textarea>
-			</td>
-		</tr>
-		<tr>
 			<td colspan="2" style=" text-align: left; padding-left: 70px;">*在申请公司Oracle/SAP标准化产品时，请填写以下信息</td>
 		</tr>
 		<tr>
