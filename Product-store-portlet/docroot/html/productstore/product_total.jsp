@@ -18,6 +18,10 @@
 	<portlet:param name="mvcPath"
 		value="/html/productstore/apply_total.jsp" />
 </portlet:renderURL>
+<portlet:renderURL var="newVersionURL">
+	<portlet:param name="mvcPath"
+		value="/html/productstore/new_version.jsp" />
+</portlet:renderURL>
 <portlet:renderURL var="assessURL">
 	<portlet:param name="mvcPath"
 		value="/html/productstore/apply_assess.jsp" />
@@ -108,15 +112,15 @@
 		<td><input type="hidden" id="<%=product.getProductId()%>"
 			name="productId" value="<%=product.getProductId()%>" /><a href=""><%=product.getProductName()%></a></td>
 		<td><%=product.getProductDesc()%></td>
-		<td><a href="<%=product.getProductLink()%>">查看产品详情</a></td>
+		<td><a href="<%=product.getProductLink()%>">查看产品文档</a></td>
 		<td><a href="<%=product.getVideoLink()%>">查看演示视频</a></td>
 		<td><a href="<%=product.getWikiLink()%>">WIKI</a></td>
 		
 		<td><aui:button value="申请使用" onClick="<%=applyProductURL%>"></aui:button></td>
 		<td><aui:button value="查看评价" onClick="<%=assessLookURL%>"></aui:button></td>
-		<td><aui:button cssClass="<%=cssClass%>" value="更新"
-				onClick="<%= updateProductURL%>"></aui:button>&nbsp;&nbsp;<aui:button
-				cssClass="<%=cssClass%>" value="删除" onClick="return sure()"></aui:button>
+		<td><aui:button cssClass="<%=cssClass%>" value="更新" onClick="<%= updateProductURL%>"></aui:button>&nbsp;&nbsp;
+			<aui:button value="新版本" onClick="<%= newVersionURL%>"></aui:button>&nbsp;&nbsp;
+			<aui:button cssClass="<%=cssClass%>" value="删除" onClick="return sure()"></aui:button>
 			<script>
 					function sure(){
 						if(confirm("确定删除？")){
@@ -126,7 +130,7 @@
 							return false;
 						}
 					}
-			</script></td>
+				</script></td>
 	</tr>
 	<%
 		cssClass = "";
