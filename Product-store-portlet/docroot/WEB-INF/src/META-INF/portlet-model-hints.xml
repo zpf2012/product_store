@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.product.store.model.Apply">
+		<field name="uuid" type="String" />
+		<field name="applyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="projectName" type="String" />
+		<field name="integrationObject" type="String" />
+		<field name="useType" type="String" />
+		<field name="approveFlag" type="String" />
+		<field name="approveDate" type="Date" />
+		<field name="creationDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="updateDate" type="Date" />
+		<field name="updatedBy" type="long" />
+		<field name="productId" type="long" />
+		<field name="useDate" type="Date" />
+	</model>
+	<model name="com.liferay.product.store.model.Assess">
+		<field name="uuid" type="String" />
+		<field name="assessId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="projectName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="multipleAssess" type="double" />
+		<field name="multiPercent" type="double" />
+		<field name="configurable" type="long" />
+		<field name="stability" type="long" />
+		<field name="integrationGrade" type="long" />
+		<field name="applyId" type="long" />
+		<field name="productId" type="long" />
+	</model>
+	<model name="com.liferay.product.store.model.Product">
+		<field name="uuid" type="String" />
+		<field name="productId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="productName" type="String" />
+		<field name="productDesc" type="String" />
+		<field name="videoLink" type="String" />
+		<field name="productLink" type="String" />
+		<field name="wikiLink" type="String" />
+		<field name="createdBy" type="long" />
+		<field name="updatedBy" type="long" />
+	</model>
+</model-hints>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.liferay.product.store.service.ApplyLocalService" class="com.liferay.product.store.service.impl.ApplyLocalServiceImpl" />
+	<bean id="com.liferay.product.store.service.ApplyService" class="com.liferay.product.store.service.impl.ApplyServiceImpl" />
+	<bean id="com.liferay.product.store.service.persistence.ApplyPersistence" class="com.liferay.product.store.service.persistence.ApplyPersistenceImpl" parent="basePersistence" />
+	<bean id="com.liferay.product.store.service.AssessLocalService" class="com.liferay.product.store.service.impl.AssessLocalServiceImpl" />
+	<bean id="com.liferay.product.store.service.AssessService" class="com.liferay.product.store.service.impl.AssessServiceImpl" />
+	<bean id="com.liferay.product.store.service.persistence.AssessPersistence" class="com.liferay.product.store.service.persistence.AssessPersistenceImpl" parent="basePersistence" />
+	<bean id="com.liferay.product.store.service.ProductLocalService" class="com.liferay.product.store.service.impl.ProductLocalServiceImpl" />
+	<bean id="com.liferay.product.store.service.ProductService" class="com.liferay.product.store.service.impl.ProductServiceImpl" />
+	<bean id="com.liferay.product.store.service.persistence.ProductPersistence" class="com.liferay.product.store.service.persistence.ProductPersistenceImpl" parent="basePersistence" />
+</beans>

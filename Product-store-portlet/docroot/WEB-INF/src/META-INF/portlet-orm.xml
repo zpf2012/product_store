@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.liferay.product.store.model.impl.ApplyModelImpl">
+		<attributes>
+			<id name="applyId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="projectName" />
+			<basic name="integrationObject" />
+			<basic name="useType" />
+			<basic name="approveFlag" />
+			<basic name="approveDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="creationDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="updateDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="updatedBy" />
+			<basic name="productId" />
+			<basic name="useDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.liferay.product.store.model.impl.AssessModelImpl">
+		<attributes>
+			<id name="assessId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="projectName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="multipleAssess" />
+			<basic name="multiPercent" />
+			<basic name="configurable" />
+			<basic name="stability" />
+			<basic name="integrationGrade" />
+			<basic name="applyId" />
+			<basic name="productId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.liferay.product.store.model.impl.ProductModelImpl">
+		<attributes>
+			<id name="productId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="productName" />
+			<basic name="productDesc" />
+			<basic name="videoLink" />
+			<basic name="productLink" />
+			<basic name="wikiLink" />
+			<basic name="createdBy" />
+			<basic name="updatedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.liferay.product.store.model.impl.ApplyImpl" name="Apply">
+		<table name="CUX_Apply" />
+		<attributes />
+	</entity>
+	<entity class="com.liferay.product.store.model.impl.AssessImpl" name="Assess">
+		<table name="CUX_Assess" />
+		<attributes />
+	</entity>
+	<entity class="com.liferay.product.store.model.impl.ProductImpl" name="Product">
+		<table name="CUX_Product" />
+		<attributes />
+	</entity>
+</entity-mappings>

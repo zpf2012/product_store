@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.liferay.product.store">
+	<author>zhangpengfei</author>
+	<namespace>CUX</namespace>
+	<entity name="Product" local-service="true" uuid="true">
+		<!-- PK fields -->
+		 <column name="productId" primary="true" type="long"></column>
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="productName" type="String"></column>
+		<column name="productDesc" type="String"></column>
+		<column name="videoLink" type="String"></column>
+		<column name="productLink" type="String"></column>
+		<column name="wikiLink" type="String" ></column>
+		<column name="createdBy" type="long"></column>
+		<column name="updatedBy" type="long"></column>
+		<finder name="ProductId" return-type="Collection">
+			<finder-column name="productId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="Apply" local-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="applyId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+        <column name="projectName" type="String"></column>
+        <column name="integrationObject" type="String"></column>
+        <column name="useType" type="String"></column>
+        <column name="approveFlag" type="String"></column>
+        <column name="approveDate" type="Date"></column>
+        <column name="creationDate" type="Date"></column>
+        <column name="createdBy" type="long"></column>
+        <column name="updateDate" type="Date"></column>
+        <column name="updatedBy" type="long"></column>
+        <column name="productId" type="long"></column>
+        <column name="useDate" type="Date"></column>
+        <finder name="ApplyId" return-type="Collection">
+            <finder-column name="applyId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="Assess" local-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="assessId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+        <column name="projectName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+        <column name="multipleAssess" type="double"></column>
+        <column name="multiPercent" type="double"></column>
+        <column name="configurable" type="long"></column>
+        <column name="stability" type="long"></column>
+        <column name="integrationGrade" type="long"></column>
+        <column name="applyId" type="long" ></column>
+        <column name="productId" type="long"></column>
+        <finder name="assessId" return-type="Assess">
+            <finder-column name="assessId"></finder-column>
+        </finder>
+        <finder name="applyId" return-type="Assess">
+            <finder-column name="applyId"></finder-column>
+        </finder>
+	</entity>
+    <exceptions>
+        <exception>ProductName</exception>
+        <exception>ProjectName</exception>
+    </exceptions>
+</service-builder>

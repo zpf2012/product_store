@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.liferay.product.store.model.Apply" />
+	<import class="com.liferay.product.store.model.Assess" />
+	<import class="com.liferay.product.store.model.Product" />
+	<class name="com.liferay.product.store.model.impl.ApplyImpl" table="CUX_Apply">
+		<cache usage="read-write" />
+		<id name="applyId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="projectName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="integrationObject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="useType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approveFlag" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approveDate" type="org.hibernate.type.TimestampType" />
+		<property name="creationDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="updateDate" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="productId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="useDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.product.store.model.impl.AssessImpl" table="CUX_Assess">
+		<cache usage="read-write" />
+		<id name="assessId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="projectName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="multipleAssess" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="multiPercent" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="configurable" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="stability" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="integrationGrade" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="applyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="productId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.product.store.model.impl.ProductImpl" table="CUX_Product">
+		<cache usage="read-write" />
+		<id name="productId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="productName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="videoLink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productLink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="wikiLink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>
