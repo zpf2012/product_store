@@ -44,44 +44,40 @@
 		<tr>
 			<th>产品经理</th>
 			<td style="text-align: left;">
-				<select name="PM" style="width: 200px; border-width: 1; border-style: solid; margin-bottom: 5px;">
-				</select>
+				<aui:input name="TD" label="" style="width: 200px; border-width: 1; border-style: solid; margin-bottom: 5px;"/>
 			</td>
 		</tr>
 		<tr>
 			<th>技术经理</th>
 			<td style="text-align: left;">
-				<aui:select name="TM" label="" style="width: 200px; border-width: 1; border-style: solid; margin-bottom: 5px;">
-					<aui:option></aui:option>
-				</aui:select>
+				<aui:input name="TD" label="" style="width: 200px; border-width: 1; border-style: solid; margin-bottom: 5px;"/>
 			</td>
 		</tr>
 		<tr>
 			<th>技术顾问</th>
 			<td style="text-align: left;">
-				<aui:select name="TD" label="" style="width: 200px; border-width: 1; border-style: solid; margin-bottom: 5px;">
-					<aui:option></aui:option>
-				</aui:select>
+				<aui:input name="TD" label="" style="width: 200px; border-width: 1; border-style: solid; margin-bottom: 5px;"/>
 			</td>
-		</tr>
-		<tr>
-			<th >产品演示URL</th>
-			<td style="text-align: left;"><aui:input type="text" label="" style=" width: 500px; border-width: 1; border-style: solid; margin-bottom: 10px;" name="videoLink"/></td>
-		</tr>
-		<tr>
-			<th>产品WIKI URL</th>
-			<td style="text-align: left;"><aui:input type="text" label="" style=" width: 500px; border-width: 1; border-style: solid; margin-bottom: 10px;" name="wikiLink" /></td>
-		</tr>
-		<tr>
-			<th>产品文档URL</th>
-			<td style="text-align: left;"><aui:input type="text" label="" style=" width: 500px; border-width: 1; border-style: solid; margin-bottom: 10px;" name="productLink" /></td>
 		</tr>
 	</table>
 	<hr>
-	<div style="margin-left: 40px;">
-		<aui:button type="submit" value="提交" style="width: 50px; padding: 5px; background-color: highlight;"/>&nbsp;&nbsp;
-		<aui:button type="reset" value="重置" style="width: 50px; padding: 5px; background-color: highlight;"/>&nbsp;&nbsp;
-		<aui:button value="取消" onClick="<%=viewURL %>" style="width: 50px; padding: 5px; background-color: highlight;"></aui:button>
+	<table border="1" width="60%">
+		<tr style="background-color: #eaeaea;">
+			<td>产品版本</td>
+			<td>发布日期</td>
+			<td width="400px">版本更新说明</td>
+			<td>发布人</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<hr>
+	<div style="margin-left: 20px;">
+		<aui:button value="返回" onClick="<%=viewURL %>" style="width: 50px; padding: 5px; background-color: highlight;"></aui:button>
 	</div>
 		
 </form>

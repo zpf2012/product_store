@@ -69,11 +69,11 @@
 <table border="1" width="98%" style="text-align: center">
 	<tr style="background-color: highlight;">
 		<th>产品名称</th>
-		<th width="300px;">产品说明</th>
+		<th>产品说明</th>
 		<th>产品介绍</th>
 		<th>测试环境</th>
 		<th>最新版本</th>
-		<th>最新版本日期</th>
+		<th>版本日期</th>
 		<th width="100px;">申请使用</th>
 		<th width="100px;">用户追踪</th>
 		<th width="200px;">产品编辑</th>
@@ -122,10 +122,10 @@
 		<td><aui:button value="查看" onClick="<%=productDetailURL%>"></aui:button></td>
 		<td><a href="http://172.20.0.28:8080/">打开</a></td>
 		<td>最新版本</td>
-		<td>最新版本日期</td>
-		<td><aui:button value="申请使用" onClick="<%=applyProductURL%>"></aui:button></td>
-		<td><a href="">用户追踪</a></td>
-		<td><aui:button cssClass="<%=cssClass%>" value="编辑" onClick="<%= updateProductURL%>"></aui:button>
+		<td>版本日期</td>
+		<td style="width: 80px;"><aui:button value="申请使用" onClick="<%=applyProductURL%>"></aui:button></td>
+		<td style="width: 80px;"><aui:button value="用户追踪" onClick="<%=assessLookURL%>"></aui:button></td>
+		<td style="width: 200px;"><aui:button cssClass="<%=cssClass%>" value="编辑" onClick="<%= updateProductURL%>"></aui:button>
 			<aui:button value="新版本" onClick="<%= newVersionURL%>"></aui:button>
 			<aui:button cssClass="<%=cssClass%>" value="删除" onClick="return sure()"></aui:button>
 			<script>

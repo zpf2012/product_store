@@ -77,7 +77,7 @@ td{
 		<tr>
 			<th>技术经理</th>
 			<td style="text-align: left;">
-				<aui:select name="TM" style="width: 200px; border-width: 1; border-style: solid; margin-bottom: 5px;">
+				<aui:select name="TM" label="" style="width: 200px; border-width: 1; border-style: solid; margin-bottom: 5px;">
 					<aui:option></aui:option>
 				</aui:select>
 			</td>

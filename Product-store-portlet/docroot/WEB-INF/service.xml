@@ -24,6 +24,13 @@
 		<column name="wikiLink" type="String" ></column>
 		<column name="createdBy" type="long"></column>
 		<column name="updatedBy" type="long"></column>
+        <column name="testEnvironmentURL" type="String"></column>
+        <column name="productProperty" type="String"></column>
+        <column name="PM" type="String"></column>
+        <column name="TM" type="String"></column>
+        <column name="TD" type="String"></column>
+        <column name="deploymentPlatform" type="String"></column>
+        <column name="newVersionId" type="long"></column>
 		<finder name="ProductId" return-type="Collection">
 			<finder-column name="productId"></finder-column>
 		</finder>
@@ -54,6 +61,10 @@
         <column name="updatedBy" type="long"></column>
         <column name="productId" type="long"></column>
         <column name="useDate" type="Date"></column>
+        <column name="applyVersion" type="String"></column>
+        <column name="PM" type="String"></column>
+        <column name="PRD" type="String"></column>
+        <column name="applyDesc" type="String"></column>
         <finder name="ApplyId" return-type="Collection">
             <finder-column name="applyId"></finder-column>
         </finder>
@@ -75,13 +86,15 @@
 		<column name="userName" type="String"></column>
         <column name="projectName" type="String"></column>
 		<column name="createDate" type="Date"></column>
-        <column name="multipleAssess" type="double"></column>
-        <column name="multiPercent" type="double"></column>
+        <column name="Expectations" type="long"></column>
+        <column name="savingEffect" type="long"></column>
         <column name="configurable" type="long"></column>
         <column name="stability" type="long"></column>
-        <column name="integrationGrade" type="long"></column>
+        <column name="documentIntegrity" type="long"></column>
         <column name="applyId" type="long" ></column>
         <column name="productId" type="long"></column>
+        <column name="isError" type="String"></column>
+        <column name="versionId" type="long"></column>
         <finder name="assessId" return-type="Assess">
             <finder-column name="assessId"></finder-column>
         </finder>
@@ -89,7 +102,29 @@
             <finder-column name="applyId"></finder-column>
         </finder>
 	</entity>
-    <exceptions>
+	<entity name="Version" local-service="true">
+
+		<!-- PK fields -->
+
+		<column name="versionId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="versionDate" type="Date"></column>
+		<column name="updateDate" type="Date"></column>
+        <column name="version" type="String"></column>
+        <column name="updateBy" type="long"></column>
+        <column name="updateName" type="String"></column>
+        <column name="installPKGURL" type="String"></column>
+	</entity>
+	<exceptions>
         <exception>ProductName</exception>
         <exception>ProjectName</exception>
     </exceptions>
